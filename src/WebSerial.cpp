@@ -217,7 +217,7 @@ const char WEBSERIAL_HTML[] PROGMEM = R"rawliteral(
     </div>
 </body>
 <script>
-    let gateway = `ws://${window.location.hostname + window.location.port + window.location.pathname}/webserialws`;
+    let gateway = `ws://${window.location.host}/webserialws`;
     let websocket;
     let textArea = document.getElementById("record");
     let enableFlowLock = false;
