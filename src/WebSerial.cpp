@@ -1,12 +1,12 @@
 #include "WebSerialLite.h"
-#include "WebSerialWebPage.h"
 
 void WebSerialClass::begin(AsyncWebServer *server, const char *url) {
   _server = server;
   _server->on(url, HTTP_GET, [](AsyncWebServerRequest *request) {
     // Send Webpage
     AsyncWebServerResponse *response = request->beginResponse_P(
-        200, "text/html", WEBSERIAL_HTML, WEBSERIAL_HTML_SIZE);
+          200, "text/html", WEBSERIAL_HTML);
+//        200, "text/html", WEBSERIAL_HTML, WEBSERIAL_HTML_SIZE);
 //    response->addHeader("Content-Encoding", "gzip");
     request->send(response);
   });
