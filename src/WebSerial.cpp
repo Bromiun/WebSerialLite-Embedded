@@ -7,7 +7,7 @@ void WebSerialClass::begin(AsyncWebServer *server, const char *url) {
     // Send Webpage
     AsyncWebServerResponse *response = request->beginResponse_P(
         200, "text/html", WEBSERIAL_HTML, WEBSERIAL_HTML_SIZE);
-    response->addHeader("Content-Encoding", "gzip");
+//    response->addHeader("Content-Encoding", "gzip");
     request->send(response);
   });
 
